@@ -8,7 +8,7 @@ import { AlphaListPage } from '../alpha-list/alpha-list';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  alphaListPage: Component;
+  alphaListPage: any;
 
   constructor(public navCtrl: NavController) {
     this.alphaListPage = AlphaListPage;

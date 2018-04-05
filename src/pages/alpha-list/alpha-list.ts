@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 import * as _ from 'lodash';
 
 @Component({
@@ -8,11 +8,6 @@ import * as _ from 'lodash';
 export class AlphaListPage {
   breeds: any;
   currentPageClass = this;
-  alphaScrollItemTemplate: string = `
-    <ion-item (click)="currentPageClass.onItemClick(item)">
-      {{item.$t}}
-    </ion-item>
-  `;
   triggerAlphaScrollChange: number = 0;
 
   constructor() {

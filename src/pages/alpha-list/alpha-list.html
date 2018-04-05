@@ -6,10 +6,12 @@
 
 <ion-content class="alpha-list-page" no-bounce>
   <ion-alpha-scroll *ngIf="breeds"
-    [listData]="breeds"
-    key="$t"
-    [itemTemplate]="alphaScrollItemTemplate"
-    [currentPageClass]="currentPageClass"
-    [triggerChange]="triggerAlphaScrollChange">
+  [listData]="breeds" key="$t"
+  [itemTemplate]="alphaScrollItemTemplate"
+  [currentPageClass]="currentPageClass"
+  [triggerChange]="triggerAlphaScrollChange">
+    <ng-template #alphaScrollItemTemplate let-item>
+      <ion-item (click)="currentPageClass.onItemClick(item)">{{item.$t}}</ion-item>
+    </ng-template>
   </ion-alpha-scroll>
 </ion-content>
